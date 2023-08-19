@@ -1,0 +1,389 @@
+---
+layout: post
+title:  "为什么要学习markdown和LaTeX"
+date:   2023-08-19 13:14:21 +0800
+author: "张轩"
+categories: 必备知识
+---
+
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
+
+* 你用word编写数学公式吗?
+* 为什么很多科学材料只有pdf没有word版?
+* 那些好看的公式排版是怎么做的?
+* 那些论文的格式为什么那么统一?
+
+Markdown是一种轻量级的排版工具，内嵌LaTeX公式编辑。LaTeX则是一种功能更强大，但是操作更繁琐、体量更大的排版工具。
+
+它们都是利用通过代码编译得到结果的排版工具，这一点和word非常不同，这也是很多人入门的一个小门槛。
+
+我主要借助网页端免费开放编译器，不需要也不推荐在本地端安装相应的编译器。我们要先用起来，再判断你是否有安装本地端的需求。
+
+关于markdown的网页编译器，我推荐[“作业部落的cmd markdown编辑器”](https://www.zybuluo.com/)。而LaTeX我推荐[overleaf](https://www.overleaf.com/)。
+
+---
+
+[TOC]
+
+# Markdown
+
+markdown语法简单，应用广泛，包括微信公众号页面排版、知乎页面排版、Github的Readme.md文件，以及很多编程语言的Notebook\(例如Jupyter Notebook\)等。
+
+关于markdown我们并不需要背住所有的代码和功能，只需知道一些需要的常规操作，其它功能可以上网查询或者查看markdown官方帮助文档。
+
+另外需要注意，不同的md编辑软件可能都喜欢夹带一些私货，这就导致一个功能在这个md编辑器中可以使用而在另一个编辑器中无法使用。
+
+这里介绍的操作不多，你可以打开作业部落的markdown编辑器，尝试这些操作。
+
+## 1. 标题
+注意在“#”和标题内容之间有空格，markdowm代码中出现的空格或者缩进都是不可随意去掉的，大家如果发现看着别人的代码发现编译结果不对可以从这方面考虑
+```
+# 一级标题
+## 二级标题
+...
+##### 五级标题
+```
+
+编译效果。。。我这里的标题就是。
+
+## 2.文字样式
+
+### 2.1加粗
+    **这是一段加粗的文字**
+**这是一段加粗的文字**
+
+### 2.2斜体
+    *这是一段斜体文字*
+*这是一段斜体文字*
+
+### 2.3删除线
+    ~~这是一段删除线文字~~
+~~这是一段删除线文字~~
+
+## 3.列表
+### 3.1无序列表
+
+```
+* 无序列表第一行
+* 无序列表第二行
+* 无序列表第三行
+    * 无序列表第3.1行
+```
+（下面编译效果）
+
+* 无序列表第一行
+* 无序列表第二行
+* 无序列表第三行
+    * 无序列表第3.1行
+
+### 3.2 有序列表
+
+```
+1. 有序列表第一行
+1. 有序列表第二行
+2. 有序列表第三行
+    1. 有序列表第3.1行
+```
+你会发现它实际上是自动计数，和你自己手动标的无关，只要是个数字就是，你也可以看看把数字改成字母会怎么样
+
+1. 有序列表第一行
+1. 有序列表第二行
+2. 有序列表第三行
+    1. 有序列表第3.1行
+
+## 4.超链接
+    [这是一个超链接](https://www.bilibili.com)
+[这是一个超链接](https://www.bilibili.com)
+
+## 5.图片
+Markdown中的展示图片需要存储在本地或者网页，前者导致md只能在你的电脑上运行，后者你会需要一个图床，这里推荐[路过图床](https://imgse.com/)
+
+注册一个账号，然后上传图片，他已经帮你弄好了md代码，你直接复制就好了
+
+[![pP1fIFH.png](https://s1.ax1x.com/2023/08/17/pP1fIFH.png)](https://imgse.com/i/pP1fIFH)
+
+## 6. 注脚
+```
+这段文字有一个注脚[^ababa]
+
+
+[^ababa]: 这是一个注脚，它可以放在任何地方，不必紧接着上面的内容
+```
+
+
+这段文字有一个注脚[^ababa]
+
+
+[^ababa]: 这是一个注脚，它可以放在任何地方，不必紧接着上面的内容
+
+## 7. markdown渲染内容生成PDF
+
+Markdown转PDF的方法都是不很简单，有的要下载软件使用命令行，有的要收费（比如这个作业部落）。大家如果有其它更好的办法，也可以分享下。
+
+我最近才找到一个比较方便而且免费使用的软件[obsidian](https://obsidian.md/)，大家可以去看它的[中文帮助](https://publish.obsidian.md/help-zh/%E7%94%B1%E6%AD%A4%E5%BC%80%E5%A7%8B)。我目前也只是使用其免费提供的pdf转换功能。
+
+
+## 更多操作请上网查询
+这里是一些推荐资料
+
+1. [https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#fn:footnote](https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#fn:footnote)
+2. [https://markdown.com.cn/](https://markdown.com.cn/)
+
+# 公式编辑
+LaTeX和markdown的公式编辑语法基本一致，为了大家能尽快进行轻量科学材料的编写，我先讲一下公式编辑。
+## 1. 行内公式和行间公式
+markdown中采用美元符号"$"进入公式编辑模式
+```
+这是行内公式$E=mc^2$这是行内公式
+
+这是行间公式$$E=mc^2$$这是行间公式
+
+这是自动编号的可引用公式
+
+\begin{equation}
+    E=mc^2
+    \label{eq:any}
+\end{equation}
+
+\eqref{eq:any}是一个自动编号的行间公式。
+```
+效果如下
+这是行内公式$E=mc^2$这是行内公式
+
+这是行间公式$$E=mc^2$$这是行间公式
+
+这是自动编号的可引用公式
+
+\begin{equation}
+    E=mc^2
+    \label{eq:any}
+\end{equation}
+
+\eqref{eq:any}是一个自动编号的行间公式。
+
+公式自动编号功能在LaTeX中比较常用，在markdown中不建议使用，好像会出现一些莫名其妙的bug。
+
+## 2. 公式编辑常用操作
+
+|含义|输入|显示|
+|--|--|--|
+|上标|`a^x`|$a^x$|
+|上标\(内容很多要用花括号\)|`a^{xy}`|$a^{xy}$|
+|上标\(内容很多不用花括号的后果\)|`a^xy`|$a^xy$|
+|下标|`a_x`|$a_x$|
+|嵌套上下标|`a^x_y+a^{x^y}`|$a^x_y+a^{x^y}$|
+|分式|`\frac{a+b}{c+d}`|$\frac{a+b}{c+d}$|
+|分式\(仅有两个字符时\)|`\frac ab`| $\frac ab$|
+|根号|`\sqrt{2}`|$\sqrt{2}$|
+|n次根号|`\sqrt[n]{2}`|$\sqrt[n]{2}$|
+|绝对值或向量的模[^2]|`\lvert x\rvert`|$\lvert x\rvert$|
+|省略号\(底线\)|`\ldots`|$a_1,\ldots,a_n$|
+|省略号\(中线\)|`\cdots`|$a_1+\cdots+a_n$|
+|向量\(箭头版\)|`\vec{a}`|$\vec{a}$|
+|向量\(加粗版\)|`\boldsymbol{a}`|$\boldsymbol{a}$|
+|向量\(物理学版\)[^3]|`\lvert a\rangle`|$\lvert a\rangle$|
+|对偶向量\(物理学版\)|`\langle a\rvert`|$\langle a\rvert$|
+|偏微分|`\partial `|$\partial$|
+|积分|`\int_0^1 {x^2} \,{\rm d}x`|$\int_0^1{x^2}\,{\rm d}x$|
+|极限|`\lim_{x \to 0}f(x)`|$\lim_{x \to 0}f(x)$|
+|累加|`\sum_{i=1}^{n}`|$\sum_{i=1}^{n}$|
+|无穷符号|`\infty`|$\infty$|
+|正负号|`\pm`|$\pm$|
+|三角函数|`\sin,\cos,\tan`|$\sin,\cos,\tan$|
+|对数函数|`\log,\ln,\log_2`|$\log,\ln,\log_2$|
+|尖帽上标|`\hat{x}`|$\hat{x}$|
+|波浪上标|`\tilde{x}`|$\tilde{x}$|
+|横线上标|`\bar{x}`|$\bar{x}$|
+|对时间求导|`\dot{x}`|$\dot{x}$|
+|对时间求二阶导|`\ddot{x}`|$\ddot{x}$|
+|全称量词|`\forall`|$\forall$|
+|特称量词|`\exists`|$\exists$|
+
+[^2]:另一种写法是`\left| a \right|`，但是这里的竖线似乎和表格冲突了，在别的一些编译器里面跑不出来。它的效果是$\left| a \right|$。和表格里展示的不一样的就在于这种可以随着里面的内容变大变小，而表格里的做不到，例如$\left| \frac ab \right|$
+
+[^3]:另一种写法是`\left| a \right>`以及对偶向量的写法`\left< a \right|`，但是这里的竖线似乎又和表格冲突了，它们的效果是$\left| a \right>,\left< a \right|$。和表格里展示的不一样的也是在于这种可以随着里面的内容变大变小，而表格里的做不到，例如$\left| \frac ab \right>$
+
+## 3. 希腊字母
+
+输入 `\小写希腊字母英文全称` 和 `\首字母大写希腊字母英文全称` 来分别输入小写和大写希腊字母。
+**对于大写希腊字母与现有字母相同的，直接输入大写字母即可。**
+
+|输入|显示|输入|显示|输入|显示|输入|显示|
+|--:|:--|--:|:--|--:|:--|--:|:--|
+|`\alpha`|$\alpha$|`A`|$A$|`\beta`|$\beta$|`B`|$B$|
+|`\gamma`|$\gamma$|`\Gamma`|$\Gamma$|`\delta`|$\delta$|`\Delta`|$\Delta$|
+|`\epsilon`|$\epsilon$|`E`|$E$|`\zeta`|$\zeta$|`Z`|$Z$|
+|`\eta`|$\eta$|`H`|$H$|`\theta`|$\theta$|`\Theta`|$\Theta$|
+|`\iota`|$\iota$|`I`|$I$|`\kappa`|$\kappa$|`K`|$K$|
+|`\lambda`|$\lambda$|`\Lambda`|$\Lambda$|`\mu`|$\mu$|`M`|$M$|
+|`\nu`|$\nu$|`N`|$N$|`\xi`|$\xi$|`\Xi`|$\Xi$|
+|`o`|$o$|`O`|$O$|`\pi`|$\pi$|`\Pi`|$\Pi$|
+|`\rho`|$\rho$|`P`|$P$|`\sigma`|$\sigma$|`\Sigma`|$\Sigma$|
+|`\tau`|$\tau$|`T`|$T$|`\upsilon`|$\upsilon$|`\Upsilon`|$\Upsilon$|
+|`\phi`|$\phi$|`\Phi`|$\Phi$|`\chi`|$\chi$|`X`|$X$|
+|`\psi`|$\psi$|`\Psi`|$\Psi$|`\omega`|$\omega$|`\Omega`|$\Omega$|
+
+**部分字母有变量专用形式，以 `\var-` 开头。**
+
+|小写形式|大写形式|变量形式|显示|
+|:--:|:--:|:--:|:--:|
+|`\epsilon`|`E`|`\varepsilon`|$\epsilon \mid E \mid \varepsilon$|
+|`\theta`|`\Theta`|`\vartheta`|$\theta \mid \Theta \mid \vartheta$|
+|`\rho`|`P`|`\varrho`|$\rho \mid P \mid \varrho$|
+|`\sigma`|`\Sigma`|`\varsigma`|$\sigma \mid \Sigma \mid \varsigma$|
+|`\phi`|`\Phi`|`\varphi`|$\phi \mid \Phi \mid \varphi$|
+
+**千万不要让我看到你用输入法打出来的希腊字母出现在公式环境里！！！**
+
+[![pP1f8ij.png](https://s1.ax1x.com/2023/08/17/pP1f8ij.png)](https://imgse.com/i/pP1f8ij)
+
+## 4. 公式中括号的使用
+
+`()`、`[]` 和 `|` 表示符号本身，使用 `\{\}` 来表示 `{}` 。当要显示大号的括号或分隔符时，要用 `\left` 和 `\right` 命令。
+例如`(\frac{x}{y}),\left(\frac{x}{y}\right)`的编译效果为
+$$(\frac{x}{y}),\left(\frac{x}{y}\right)$$
+
+一些特殊的括号：
+
+|输入|显示|输入|显示|
+|--|--|--|--|
+|`\langle`|$\langle$|`\rangle`|$\rangle$|
+|`\lceil`|$\lceil$|`\rceil`|$\rceil$|
+|`\lfloor`|$\lfloor$|`\rfloor`|$\rfloor$|
+|`\lbrace`|$\lbrace$|`\rbrace`|$\rbrace$|
+|`\lvert`|$\lvert$|`\rvert`|$\rvert$|
+|`\lVert`|$\lVert$|`\rVert`|$\rVert$|
+
+
+## 5. 数学字体
+
+若要对公式的某一部分字符进行字体转换，可以用 `\字体 {需转换的部分字符}` 命令，其中 `\字体` 部分可以参照下表选择合适的字体。一般情况下，公式默认为斜体字 $italic$ 。
+
+|字体|输入|显示|
+|--|--|--|
+|默认字体||$Sample \mit$|
+|罗马体（正体）|`\rm`或`\mathrm`|$\rm{Sample}$|
+|正粗体|`\bf`|$\bf{Sample}$|
+|斜粗体|`\boldsymbol`|$\boldsymbol{Sample}$|
+|旧德式字体|`\frak`|$\frak{Sample}$|
+|花体|`\mathcal`或`\cal`|$\cal{SAMPLE}$
+|手写花体|`\mathscr`或`\scr`|$\scr{SAMPLE}$|
+|黑板粗体|`\mathbb`或`\Bbb`|$\Bbb{SAMPLE}$|
+
+其中花体、手写花体、黑板粗体只适用大写字母。黑板粗体多用于定义自然数集、有理数域、实数域和复数域
+$$\Bbb{N,Q,R,C}$$
+
+## 6. 如何找到我要的符号
+
+ **完整的 $\LaTeX$ 可用符号列表可以在 [这份文档](https://mirror.its.dal.ca/ctan/info/symbols/comprehensive/symbols-a4.pdf) 中查阅（极长，共 348 页），大部分常用符号可以参阅 [这份精简版文档](https://pic.plover.com/MISC/symbols.pdf) 查询。**需要注意的是，$\LaTeX$ 符号并不保证在 MathJax v2.2 中可用，即在 Cmd Markdown 编辑阅读器中可能并不支持所输入的特定命令。
+
+[若找不到需要的符号，推荐使用 $\large\rm{Detexify}$ 来画出想要的符号](http://detexify.kirelabs.org/classify.html)
+
+![detexify_t](https://cdn.ericp.cn/img/202009/b0fe4b234a3fc.png)</span>
+
+## 7. 矩阵和行列式
+矩阵
+```
+\begin{bmatrix}
+a & b\\
+c & d
+\end{bmatrix}
+```
+
+$$
+\begin{bmatrix}
+a & b\\
+c & d
+\end{bmatrix}
+$$
+
+行列式
+```
+\begin{vmatrix}
+a & b\\
+c & d
+\end{vmatrix}
+```
+
+$$
+\begin{vmatrix}
+a & b\\
+c & d
+\end{vmatrix}
+$$
+
+## 8. 公式排版规范！！！
+
++ **自然对数的底数$\rm{e}$要用`\rm{e}`或`\mathrm{e}`**
++ **微分的$\rm{d}$要用`\rm{d}`或`\mathrm{d}`**
++ **虚数$\bf{i}$要用`\bf{i}`或`\mathbf{i}`或至少正体`\mathrm{i}`**
++ **专用函数例如三角函数$\sin(x)$要用专门的命令$\sin(x)$，不要写成$sin(x)$，懒得查命令的话至少也请用罗马体凑合，即使用`\rm{sin}(x)`**
++ 在公式环境中使用文本内容的建议用`\text{你的文本}`
+
+
+补充说明：在LaTeX中，新专用函数可以用`\operatorname`来创建，需要amsmath宏包，这个功能在作业部落的编辑器里可以使用，但是其它编辑器不一定能够使用。
+
+在一般的Markdown中，可以使用罗马体配合`\mathop`来创建，例如
+
++ 反双曲正弦函数$\mathop{\rm{arcsinh}}$要写成`\mathop{\rm{arcsinh}}`，这是直接`\arcsinh`的效果$\arcsinh$。
++ 复变函数的留数$\mathop{\rm{Res}}$是`\mathop{\rm{Res}}`
++ 复数的实部$\mathop{\rm{Re}}$和虚部$\mathop{\rm{Im}}$用`\Re`和`\Im`的后果是$\Re,\Im$，应该用`\mathop{\rm{Re}}`和`\mathop{\rm{Im}}`
+
+
+## 9. 参考资料
+[https://www.zybuluo.com/codeep/note/163962](https://www.zybuluo.com/codeep/note/163962)
+
+---
+
+下面的内容必须电脑演示，只列大纲。
+
+# $\LaTeX$
+
+和Markdown相比，LaTeX适用于中或大型科学文件编写或者有特定格式要求的报告，例如物理实验报告、学术会议展示幻灯片、出版书籍等。LaTeX入门门槛略高，**但是我们只需要找到一款喜欢的模板，然后对着改就可以了。如果遇到不会的操作，上网查就可以了。**其实我本身还处在一边用一边到处查的阶段，也会因为LaTeX奇妙的报错而无可奈何。
+
+1. 认识代码大致意思
+2. 如何添加图片（表格我一直在用mathcha导入）
+3. bibtex参考文献
+4. 报错咋办？
+    1. 上网查错误信息
+    2. 自己检查
+    3. 摇人检查
+    4. 忽略错误
+
+这里我推荐两个模板，也是我最常用的模板。
+[https://wwho.lanzouq.com/b04wa7fcb 密码:6muv](https://wwho.lanzouq.com/b04wa7fcb)
+
+大家有条件的还是支持一下原作者吧
+1. [https://github.com/milanmarks/FDU-Beamer-Theme](https://github.com/milanmarks/FDU-Beamer-Theme)
+2. [https://gist.github.com/stone-zeng/64a43eb7bfc6bae1640784e7c373824a](https://gist.github.com/stone-zeng/64a43eb7bfc6bae1640784e7c373824a)
+
+## 推荐资料
+[https://github.com/stone-zeng/latex-talk](https://github.com/stone-zeng/latex-talk)
+
+# Mathcha——生产力MAX!
+
+这是一款线上数学编辑器，介于Word所见即所得排版和LaTeX代码排版之间。
+
+它实际上比md和LaTeX都要容易掌握，非常简单好用，还能把上面写好的内容直接转化成LaTeX代码。
+
+这是官方网址[https://www.mathcha.io/](https://www.mathcha.io/)
+
+[这是](https://www.bilibili.com/video/BV1tf4y1g7qg/?spm_id_from=333.337.search-card.all.click)我们物理系一个刚毕业的学长在我们学校的一个讲座，讲的就是mathcha的使用。
+
+我只讲它的部分功能
+
+1. 快捷键编辑
+2. LaTeX代码自动生成
+3. 画图找符号
+
+那我为什么不直接教它，要先讲Markdown和LaTeX？如果你完全不知道LaTeX公式如何编辑，那么很有可能在这里用出猴子扛着激光枪乱甩的效果。用的时候出了问题也不知道怎么解决。
