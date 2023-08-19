@@ -1,3 +1,9 @@
+---
+layout: page
+title: 关于讨论班
+permalink: /about/
+---
+
 <head>
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
     <script type="text/x-mathjax-config">
@@ -9,12 +15,6 @@
         });
     </script>
 </head>
-
----
-layout: page
-title: 关于讨论班
-permalink: /about/
----
 
 我们是来自[复旦大学核科学与技术系](https://imp.fudan.edu.cn/)的一群本科同学，我们希望能通过讨论班的形式学习一些额外需要的知识和方法。讨论班的形式为线下同学轮转讲授指定教材或者讲义的内容，我们将在这个网站上发布每次讨论班的 handouts，默认提交是 Markdown `.md` 文件（如果不熟悉 Markdown 语法的同学请参考讨论班中的教程）。
 
