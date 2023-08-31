@@ -256,7 +256,7 @@ markdown中采用美元符号"$"进入公式编辑模式
 |`\sigma`|`\Sigma`|`\varsigma`|$\sigma \mid \Sigma \mid \varsigma$|
 |`\phi`|`\Phi`|`\varphi`|$\phi \mid \Phi \mid \varphi$|
 
-**千万不要让我看到你用输入法打出来的希腊字母出现在公强调文本式环境里！！！**
+**千万不要让我看到你用输入法打出来的希腊字母出现在公式环境里！！！**
 
 [![pP1f8ij.png](https://s1.ax1x.com/2023/08/17/pP1f8ij.png)](https://imgse.com/i/pP1f8ij)
 
