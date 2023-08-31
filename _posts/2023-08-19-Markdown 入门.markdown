@@ -31,7 +31,7 @@ Markdown是一种轻量级的排版工具，内嵌LaTeX公式编辑。LaTeX则�
 
 关于markdown的网页编译器，我推荐[“作业部落的cmd markdown编辑器”](https://www.zybuluo.com/)。而LaTeX我推荐[overleaf](https://www.overleaf.com/)。
 
-作业部落的网站好像出了点问题，之前已知访问得很流畅的，我也是一直再使用它，我这个教程不少都是抄的它的官方文档。最近几天变得无法访问了。那我又找了个国内可以访问的免费的且功能还行的显示markdown编辑器，是[stackedit中文版](https://stackedit.cn/app#)，当然英文版[StackEdit](https://stackedit.io/app#)似乎也可以再国内访问，大家喜欢哪个就用哪个。
+作业部落的网站好像出了点问题，之前一直访问得很流畅的，我也是一直再使用它，我这个教程不少都是抄的它的官方文档。最近几天变得无法访问了。那我又找了个国内可以访问的免费的且功能还行的线上markdown编辑器，是[stackedit中文版](https://stackedit.cn/app#)，当然英文版[StackEdit](https://stackedit.io/app#)似乎也可以再国内访问，大家喜欢哪个就用哪个。
 
 以防万一给电脑小白科普一下，markdown又专门的文件格式，像word是`.doc`，markdown是`.md`。我推荐的两款md线上编辑器都支持上传和下载md文件，至于导出为pdf，尚未找到好用的线上且免费提供的。大家有知道的可以推荐下。
 
