@@ -263,8 +263,8 @@ markdown中采用美元符号"$"进入公式编辑模式
 ## 4. 公式中括号的使用
 
 `()`、`[]` 和 `|` 表示符号本身，使用 `\{\}` 来表示 `{}` 。当要显示大号的括号或分隔符时，要用 `\left` 和 `\right` 命令。
-例如`(\frac{x}{y}),\left(\frac{x}{y}\right)`的编译效果为
-$$(\frac{x}{y}),\left(\frac{x}{y}\right)$$
+例如`(\frac{x}{y}),\left(\frac{x}{y}\right)`的编译效果为 $$(\frac{x}{y}),\left(\frac{x}{y}\right)$$
+
 
 一些特殊的括号：
 
@@ -294,7 +294,8 @@ $$(\frac{x}{y}),\left(\frac{x}{y}\right)$$
 |黑板粗体|`\mathbb`或`\Bbb`|$\Bbb{SAMPLE}$|
 
 其中花体、手写花体、黑板粗体只适用大写字母。黑板粗体多用于定义自然数集、有理数域、实数域和复数域
-$$\Bbb{N,Q,R,C}$$
+ $$\Bbb{N,Q,R,C}$$
+ 
 
 ## 6. 如何找到我要的符号
 
