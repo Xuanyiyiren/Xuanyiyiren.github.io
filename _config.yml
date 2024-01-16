@@ -18,11 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 核科补习班
+title: Xuan Zhang
 description: >- # this means to ignore newlines until "baseurl:"
-  这是复旦大学核科学与技术系本科生讨论班的网页。
-  
-  在这里，我们会提供讨论班的一些具体信息和讨论内容，同时我们也会放出我们讨论课的 handouts。
+   我是复旦大学核科学与技术系的本科生。
 
 # Build settings
 theme: minima
