@@ -1,2 +1,2 @@
 # xuanyiyiren.github.io
-xuan yi 的个人主页
+xuan yi 的[个人主页](https://xuanyiyiren.github.io/)
