@@ -16,7 +16,7 @@ permalink: /about/
     </script>
 </head>
 
-我们是来自[复旦大学核科学与技术系](https://imp.fudan.edu.cn/)的普信本科生，我对 QFT 和 Hep-th 感兴趣。欢迎大家来和我讨论。
+我们是来自[复旦大学核科学与技术系](https://imp.fudan.edu.cn/)的**普信**本科生，我对 QFT 和 Hep-th 感兴趣，欢迎大家来和我讨论。
 
 我目前正在试图学习的内容有
 * QFT散射振幅和费曼规则，大概是Schwartz第一部分的内容
