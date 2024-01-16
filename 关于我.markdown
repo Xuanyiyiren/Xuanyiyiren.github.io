@@ -41,3 +41,7 @@ permalink: /about/
   * 数电
   * 核辐射探测器的物理学和电子学
   * 傅里叶光学，作为当时数理方法荣誉课的课题，主要是讨论成像和二维傅里叶变换的关系。（What "The Method to Solve PDE by Hands" have to do with such a engineering optical topic? I am confused too.）
+  * 计算物理，老师讲的比较简单，没写过多少代码，属于是轻微了解过背景。
+* 瞎选课学到的奇怪内容
+  * 集合论（What an ugly theory!），好在老师给分好。普信的我学数学分析的时候说什么公理集合论，觉得应该要学一下，选了课学完了发现集合论课程和集合论在数学中的应用基本没什么关系。基础集合论课程的基础内容是基数和序数，关注的问题是大基数问题等等。集合论的应用主要是AC，基本上知道AC、Zorn引理、Hausdorff极大引理就够了。
+  * 动力系统，跟着Strogatz走了一遍，主要是前面一维和二维动力系统的内容。
