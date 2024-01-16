@@ -7,4 +7,4 @@ layout: home
 
 <link rel="shortcut icon" type="image/x-icon" href="/logo.png?">
 
-欢迎来到我的博客。
+欢迎来到我的博客，这是我的[Github网页](https://github.com/Xuanyiyiren)。
