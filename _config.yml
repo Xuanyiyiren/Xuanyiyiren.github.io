@@ -18,9 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+
 title: Xuan yi
+email: xuanzhang2002@gmail.com,xzhang21@m.fudan.edu.cn
 description: >- # this means to ignore newlines until "baseurl:"
    一个没书读而且吃不起饭的场论爱好者
+
+github_username:  Xuanyiyiren
 
 # Build settings
 theme: minima
