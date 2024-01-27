@@ -26,10 +26,7 @@ categories: Minecraft
 
 于是就有了壮观的一幕。大量的小岩浆怪像shi一样挤出处死部分。
 
-<div align=center><img src="fig/2024-01-28_01.05.43.png" width="  "></div>
-
-<div align=center><img src="fig/2024-01-28_01.09.58.png" width="  "></div>
-
-<div align=center><img src="fig/2024-01-28_01.09.52.png" width="  "></div>
-
-<div align=center><img src="fig/2024-01-28_01.29.53.png" width="  "></div>
+![f0cfa37489dd314e98ec4b1e3266631b.png](https://i.miji.bid/2024/01/28/f0cfa37489dd314e98ec4b1e3266631b.png)
+![d6a5a6d3da82bf9a4505d8f02329a8b9.png](https://i.miji.bid/2024/01/28/d6a5a6d3da82bf9a4505d8f02329a8b9.png)
+![4d3076bb7a021d6136336e7d63848da0.png](https://i.miji.bid/2024/01/28/4d3076bb7a021d6136336e7d63848da0.png)
+![85b6ff7e28413959fb2078f782acdc28.png](https://i.miji.bid/2024/01/28/85b6ff7e28413959fb2078f782acdc28.png)
