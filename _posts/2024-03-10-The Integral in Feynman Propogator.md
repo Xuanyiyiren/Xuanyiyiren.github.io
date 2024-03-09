@@ -37,7 +37,7 @@ This function have only one singularity which is $\omega=\omega_0-\mathrm{i}\var
 
 <div align=center><img src="https://github.com/Xuanyiyiren/picx-images-hosting/raw/master/feynmanporpagator.7i04qxon6o.svg" width="50%"></div>
 
-Note only if the close curve is clockwise, there should be a negative value sign ''$-$'' before residue in Residue Formula.
+Note that when the close curve is clockwise, there should be a negative value sign ''$-$'' before residue in Residue Formula.
 
 ### If $t>0$
 
