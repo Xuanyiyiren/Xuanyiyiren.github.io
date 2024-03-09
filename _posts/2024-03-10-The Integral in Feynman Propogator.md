@@ -116,6 +116,7 @@ $$
 =\frac{\mathrm{e}^{\mathrm{i}(\omega-\omega') t}}{\omega -\omega'}\cdot \mathrm{e}^{\mathrm{i}\omega't}
 =\frac{\mathrm{e}^{\mathrm{i}\omega't}}{\omega-\omega'} + \cdots
 $$
+
 Thus the residue is $\mathrm{e}^{\mathrm{i}\omega't}=\mathrm{e}^{\mathrm{i}\omega_0t}$. 
 
 The second term is zero due to the same reason before. The only difference is this time $t<0$ and $\theta$ is form $0$ to $-\pi$.
