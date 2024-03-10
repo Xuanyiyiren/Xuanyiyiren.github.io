@@ -19,13 +19,13 @@ categories: Physics
 </head>
 
 
-In QM and QFT course, we need to use the Residue theorem to get do a integral in the calculation in propagator
+In QM and QFT course, we need to use the Residue Theorem to get do a integral in the calculation in propagator
 
 $$
 \int_{-\infty}^{+\infty} \frac{\mathrm{e}^{\mathrm{i}\omega t}}{\omega - \omega_0 + \mathrm{i}\varepsilon}\mathrm{d}\omega
 $$
 
-To calculate this integral, we need to use the Residue theorem. And another important things is the sign of $t$.
+To calculate this integral, we need to use the Residue theorem. And another important thing is the sign of $t$.
 
 Choose $\omega$ as the point in the complex plane. The integral is from $-\infty \in \mathbb{R}$ to $+\infty \in \mathbb{R}$. There are two ways to construct the closed curve (the red curve and the blue curve in the figure below). And the function to be integrated is 
 
