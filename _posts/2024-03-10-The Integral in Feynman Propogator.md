@@ -121,7 +121,7 @@ Thus the residue is $\mathrm{e}^{\mathrm{i}\omega't}=\mathrm{e}^{\mathrm{i}\omeg
 
 The second term is zero due to the same reason before. The only difference is this time $t<0$ and $\theta$ is form $0$ to $-\pi$.
 
-### The total result
+### Total result
 
 $$
 \int_{-\infty}^{+\infty} \frac{\mathrm{e}^{\mathrm{i}\omega t}}{\omega - \omega_0 + \mathrm{i}\varepsilon}\mathrm{d}\omega=
@@ -132,12 +132,22 @@ If $\omega$ is shifted to $-\omega$ on the numerator. We can just shift $t$ to $
 
 $$
 \int_{-\infty}^{+\infty} \frac{\mathrm{e}^{-\mathrm{i}\omega t}}{\omega - \omega_0 + \mathrm{i}\varepsilon}\mathrm{d}\omega
-=-2\pi\mathrm{i}\mathrm{e}^{-\mathrm{i}\omega_0t}\Theta(t) \tag{1'}
+=-2\pi\mathrm{i}\mathrm{e}^{-\mathrm{i}\omega_0t}\Theta(t) \tag{2}
 $$
 
-If $\varepsilon$ is shifted to $-\varepsilon$, keeping $\varepsilon>0$. Of cause you can just repeat the above process. But you can play a trick by applying complex conjugate on both side of equation (1').
+If $\varepsilon$ is shifted to $-\varepsilon$, keeping $\varepsilon>0$. Of cause you can just repeat the above process. But you can play a trick by applying complex conjugate on both side of equation (1).
 
 $$
-\int_{-\infty}^{+\infty} \frac{\mathrm{e}^{\mathrm{i}\omega t}}{\omega - \omega_0 - \mathrm{i}\varepsilon}\mathrm{d}\omega
-=2\pi\mathrm{i}\mathrm{e}^{\mathrm{i}\omega_0t}\Theta(t) \tag{2}
+\int_{-\infty}^{+\infty} \frac{\mathrm{e}^{-\mathrm{i}\omega t}}{\omega - \omega_0 - \mathrm{i}\varepsilon}\mathrm{d}\omega
+=2\pi\mathrm{i}\mathrm{e}^{-\mathrm{i}\omega_0t}\Theta(-t) \tag{3}
+$$
+Or we can rewrite them as the Inverse Fourier Transform
+$$
+\begin{align}
+\int_{-\infty}^{+\infty}\frac{\mathrm{d}\omega}{2\pi}\mathrm{e}^{-\mathrm{i}\omega t} \frac{\mathrm{i}}{\omega - \omega_0 + \mathrm{i}\varepsilon}=
+\mathrm{e}^{-\mathrm{i}\omega_0t}\Theta(t) \tag{2'}
+\\
+\int_{-\infty}^{+\infty} \frac{\mathrm{d}\omega}{2\pi}\mathrm{e}^{-\mathrm{i}\omega t}\frac{\mathrm{i}}{\omega - \omega_0 - \mathrm{i}\varepsilon}
+=-\mathrm{e}^{\mathrm{i}\omega_0t}\Theta(-t) \tag{3'}
+\end{align}
 $$
