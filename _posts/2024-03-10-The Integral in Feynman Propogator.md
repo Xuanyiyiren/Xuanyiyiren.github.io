@@ -135,7 +135,7 @@ $$
 =-2\pi\mathrm{i}\mathrm{e}^{-\mathrm{i}\omega_0t}\Theta(t) \tag{2}
 $$
 
-If $\varepsilon$ is shifted to $-\varepsilon$, keeping $\varepsilon>0$. Of cause you can just repeat the above process. But you can play a trick by applying complex conjugate on both side of equation (1).
+If I want to shift $\varepsilon$ to $-\varepsilon$, keeping $\varepsilon>0$. Of cause you can just repeat the above process. But you can play a trick by applying complex conjugate on both side of equation (1).
 
 $$
 \int_{-\infty}^{+\infty} \frac{\mathrm{e}^{-\mathrm{i}\omega t}}{\omega - \omega_0 - \mathrm{i}\varepsilon}\mathrm{d}\omega
@@ -148,6 +148,6 @@ $$
 \mathrm{e}^{-\mathrm{i}\omega_0t}\Theta(t) \tag{2'}
 \\
 \int_{-\infty}^{+\infty} \frac{\mathrm{d}\omega}{2\pi}\mathrm{e}^{-\mathrm{i}\omega t}\frac{\mathrm{i}}{\omega - \omega_0 - \mathrm{i}\varepsilon}
-=-\mathrm{e}^{\mathrm{i}\omega_0t}\Theta(-t) \tag{3'}
+=-\mathrm{e}^{-\mathrm{i}\omega_0t}\Theta(-t) \tag{3'}
 \end{align}
 $$
