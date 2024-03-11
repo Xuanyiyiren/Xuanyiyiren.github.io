@@ -99,18 +99,24 @@ $$
 \int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{-\mathrm{i}x^2}=\sqrt{\frac \pi 2}(1-\mathrm{i})=\sqrt{-\mathrm{i}\pi}
 $$
 
+Note: The $\sqrt z$ is a multivalued function, here we choose
+
+$$
+\sqrt{R\mathrm{e^{\mathrm{i}\theta}}}:=\sqrt R \mathrm{e}^{\mathrm{i}\theta/2},R>0,\theta\in\left(-\pi,\pi\right]
+$$
+
 > To prove this, we need to use the residue theorem.
 >
 > <div align=center><img src="https://github.com/Xuanyiyiren/picx-images-hosting/raw/master/Fresnel-Integral.7awwxewzna.svg" width="300"></div>
 >
 > $$
 > \int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{\mathrm{i}x^2}=\int_{-\infty}^{\infty}\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=\lim_{R\to\infty}\int_{D}^{A}\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}\\
-\oint_{ABCDA}\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=0\\
-\Rightarrow\int_A^B\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=\int_C^B\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}-\left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}
+> \oint_{ABCDA}\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=0\\
+> \Rightarrow\int_A^B\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=\int_C^B\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}-\left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}
 > $$
 >
-> The first term on the right side is just Gaussian Integtal
-> 
+> The first term on the right side is just Gaussian Integral
+>
 > $$
 > \begin{align}
 > \int_C^B\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}&\xrightarrow{z=x\mathrm{e}^{\mathrm{i}\pi/4}}\int_{-\infty}^{\infty}\mathrm{d}(x\mathrm{e^{\mathrm{i}\pi/4}})\,\mathrm{e}^{\mathrm{i}x^2\mathrm{e}^{\mathrm{i}\pi/2}}
@@ -119,15 +125,44 @@ $$
 > \\&=\sqrt{\frac \pi2}(1+\mathrm{i})=\sqrt{\mathrm{i}\pi}
 > \end{align}
 > $$
-> 
-> Note: The $\sqrt z$ is a multivalued function, here we choose
-> 
+>
+> The second term is zero
+>
 > $$
-> \sqrt{R\mathrm{e^{\mathrm{i}\theta}}}:=\sqrt R \mathrm{e}^{\mathrm{i}\theta/2},R>0,\theta\in\left(-\pi,\pi\right]
+> \begin{align}
+> \left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}&\to 2\lim_{R\to\infty}\int_A^B\,\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}
+> \\&=2\lim_{R\to\infty}\int_0^{\pi/4}\mathrm{d}(R\mathrm{e}^{\mathrm{i}\theta}) \mathrm{e}^{\mathrm{i}R^2\mathrm{e}^{2\mathrm{i}\theta}}
+> \\&=2\lim_{R\to\infty}\int_0^{\pi/4}\mathrm{i}\mathrm{e}^{\mathrm{i}\theta}R\mathrm{d}\theta\, \mathrm{e}^{\mathrm{i}R^2(\cos{2\theta}+\mathrm{i}\sin{2\theta})}
+> \\&=2\lim_{R\to\infty}\int_0^{\pi/4}\mathrm{d}\theta\, R\mathrm{e}^{-R^2\sin{2\theta}}\,\mathrm{i}\mathrm{e}^{\mathrm{i\left(\theta+R^2\cos{2\theta}\right)}}
+> \end{align}
 > $$
+>
+> So
+> $$
+> \begin{align}
+> \left|\int_0^{\pi/4}\mathrm{d}\theta\, R\mathrm{e}^{-R^2\sin{2\theta}}\,\mathrm{i}\mathrm{e}^{\mathrm{i\left(\theta+R^2\cos{2\theta}\right)}}\right|&\leq \int_0^{\pi/4}\mathrm{d}\theta\, R\exp\left(-R^2\sin 2\theta\right)
+> \\&=\left(\int_{0}^{\delta/R}+\int_{\delta/R}^{\pi/4}\right)\mathrm{d}\theta\,R\exp\left(-R^2\sin 2\theta\right)
+> \\&\leq\frac{\delta}{R}R+\frac{\pi}{4} \exp(-R^2\sin(\delta/R))
+> \\&= \delta+\frac{\pi}{4} \exp(-R^2\sin(\delta/R))
+> \end{align}
+> $$
+>
+> Now take $R\to\infty$ on both sides 
+>
+> $$
+> \lim_{R\to \infty}\left|\int_0^{\pi/4}\mathrm{d}\theta\, R\mathrm{e}^{-R^2\sin{2\theta}}\,\mathrm{i}\mathrm{e}^{\mathrm{i\left(\theta+R^2\cos{2\theta}\right)}}\right|\leq \delta
+> \\
+> \lim_{R\to \infty}\left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}\leq 2\delta
+> $$
+> 
+> Here $\delta$ can be any positive number small enough(no need to be infinitesimal), this means 
+> $$
+> \lim_{R\to \infty}\left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=0
+> $$
+> 
+> So the second term is zero. The conclusion has been proved.
 
 Thus we have
-
 $$
 \int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{\mathrm{i}\lambda x^2}=\sqrt{\frac{\mathrm{i}\pi}{\lambda}},\lambda\in\mathbb{R}
 $$
