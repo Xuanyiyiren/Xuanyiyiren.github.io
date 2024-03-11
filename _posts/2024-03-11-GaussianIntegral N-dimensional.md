@@ -138,6 +138,7 @@ $$
 > $$
 >
 > So
+> 
 > $$
 > \begin{align}
 > \left|\int_0^{\pi/4}\mathrm{d}\theta\, R\mathrm{e}^{-R^2\sin{2\theta}}\,\mathrm{i}\mathrm{e}^{\mathrm{i\left(\theta+R^2\cos{2\theta}\right)}}\right|&\leq \int_0^{\pi/4}\mathrm{d}\theta\, R\exp\left(-R^2\sin 2\theta\right)
