@@ -177,8 +177,8 @@ By the same way before, we can get the following formulas.
 In the following formulas, $A$ is a real symmetric invertible matrix
 
 $$
-\int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{\mathrm{i}x^{\text T}Ax}=\sqrt{\frac{(\mathrm{i}\pi)^n}{\det A}}\\
-\int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{\mathrm{i}\left(x^{\text T}Ax+b^{\text T}x\right)}=\sqrt{\frac{(\mathrm{i}\pi)^n}{\det A}}\exp\left(\frac{\mathrm{i}}{2} b^{\text T}A^{-1}b\right)
+\int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{\frac{\mathrm{i}}{2}x^{\text T}Ax}=\sqrt{\frac{(\mathrm{i}\pi)^n}{\det A}}\\
+\int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{\mathrm{i}\left(\frax^{\text T}Ax+b^{\text T}x\right)}=\sqrt{\frac{(\mathrm{i}\pi)^n}{\det A}}\exp\left(\frac{\mathrm{i}}{2} b^{\text T}A^{-1}b\right)
 $$
 
 
