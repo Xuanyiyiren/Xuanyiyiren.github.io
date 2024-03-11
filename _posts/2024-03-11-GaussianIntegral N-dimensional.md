@@ -156,6 +156,7 @@ $$
 > $$
 > 
 > Here $\delta$ can be any positive number small enough(no need to be infinitesimal), this means 
+> 
 > $$
 > \lim_{R\to \infty}\left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=0
 > $$
@@ -163,6 +164,7 @@ $$
 > So the second term is zero. The conclusion has been proved.
 
 Thus we have
+
 $$
 \int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{\mathrm{i}\lambda x^2}=\sqrt{\frac{\mathrm{i}\pi}{\lambda}},\lambda\in\mathbb{R}
 $$
