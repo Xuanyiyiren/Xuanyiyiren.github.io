@@ -198,7 +198,7 @@ If we shift $A$ to $A/\mathrm{i}$, then we get the $N$-dimensional Fresnel Integ
 
 We can choose a loop for $\mathrm{e}^{-z^2}$ like in the Fresnel Integral case but without an fixed angle at $45\degree$.
 
-<div align=center><img src="D:\量子力学II\note\figs\Fresnel-Integral-general.svg" width="300"></div>
+<div align=center><img src="https://github.com/Xuanyiyiren/picx-images-hosting/raw/master/Fresnel-Integral-general.7p1jwa6a2.svg" width="300"></div>
 
 $$
 \int_C^B\mathrm{d}z\,\mathrm{e}^{-z^2}=\int_D^A\mathrm{d}z\,\mathrm{e}^{-z^2}+\left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{-z^2}
@@ -279,7 +279,7 @@ $$
 
 Thus we get one of our ideal result:
 
-If $A$ is a symmetric invertible matrix whose real part is positive definite matrix, then
+If $A$ is matrix whose real part is positive definite symmetric matrix and imaginary part is invertible symmetric matrix, then
 
 $$
 \int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{-{\frac12}x^{\text T}Ax}=\sqrt{\frac{(2\pi)^n}{\det A}}
