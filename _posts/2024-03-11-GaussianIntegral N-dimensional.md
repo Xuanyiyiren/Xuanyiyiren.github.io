@@ -243,20 +243,20 @@ Consider $A=B+\mathrm{i}C$ is a symmetric complex matrix and $B$ is a real symme
 So $B=R^2$ and $R$ is also real symmetric positive definite matrix(Refer to *Linear Algebra Done Right*). Thus
 
 $$
-x^{\text T}Ax\xlongequal{y=Rx}y^{\text T}R^{-1}AR^{-1}y=y^{\text T}(I+\mathrm{i}R^{-1}CR^{-1})y
+x^{\text T}Ax\xrightarrow{y=Rx}y^{\text T}R^{-1}AR^{-1}y=y^{\text T}(I+\mathrm{i}R^{-1}CR^{-1})y
 $$
 
 Then we can diagonalize $R^{-1}CR^{-1}$.
 
 $$
-x^{\text T}Ax\xlongequal[y'=Py]{y=Rx}y'^{\text T}y'+\mathrm{i}y'^{\text T}\Lambda y'
+x^{\text T}Ax\xrightarrow[y'=Py]{y=Rx}y'^{\text T}y'+\mathrm{i}y'^{\text T}\Lambda y'
 $$
 
 So in the integral
 
 $$
 \begin{align}
-\int \mathrm{d} x\ \mathrm{e}^{-\frac{1}{2} x^{\mathrm{T}} Ax} & \xlongequal[y'=Py]{y=Rx}\int \mathrm{d} x\ \mathrm{e}^{-\frac{1}{2} x^{\mathrm{T}} Ax}\\
+\int \mathrm{d} x\ \mathrm{e}^{-\frac{1}{2} x^{\mathrm{T}} Ax} & \xrightarrow[y'=Py]{y=Rx}\int \mathrm{d} x\ \mathrm{e}^{-\frac{1}{2} x^{\mathrm{T}} Ax}\\
  & =\int | \det R| \mathrm{d} y'\ \exp\left( -\frac{1}{2} y^{\prime \mathrm{T}} y-\frac{\mathbf{i}}{2} y^{\prime \mathrm{T}} \Lambda y'\right)\\
  & =| \det R| \prod\limits _{k=1}^{n}\int \mathrm{d} y'_{k} \ \exp\left( -\frac{1}{2}( 1+\mathbf{i} \lambda _{k}) y^{\prime 2}_{k}\right)\\
  & =| \det R| \prod\limits _{k=1}^{n}\sqrt{\frac{2\pi }{( 1+\mathbf{i} \lambda _{k})}}\\
