@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Integral in Feynman Propogator"
+title:  "The Integral in Feynman Propagator"
 date:   2024-03-10 02:47:00 +0800
 author: "Xuan Zhang"
 categories: Physics
