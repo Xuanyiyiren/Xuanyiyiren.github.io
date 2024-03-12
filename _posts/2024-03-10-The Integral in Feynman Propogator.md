@@ -141,7 +141,9 @@ $$
 \int_{-\infty}^{+\infty} \frac{\mathrm{e}^{-\mathrm{i}\omega t}}{\omega - \omega_0 - \mathrm{i}\varepsilon}\mathrm{d}\omega
 =2\pi\mathrm{i}\mathrm{e}^{-\mathrm{i}\omega_0t}\Theta(-t) \tag{3}
 $$
+
 Or we can rewrite them as the Inverse Fourier Transform
+
 $$
 \begin{align}
 \int_{-\infty}^{+\infty}\frac{\mathrm{d}\omega}{2\pi}\mathrm{e}^{-\mathrm{i}\omega t} \frac{\mathrm{i}}{\omega - \omega_0 + \mathrm{i}\varepsilon}=
