@@ -18,7 +18,7 @@ categories: Mathmatics and Physics
     </script>
 </head>
 
-# Gaussian Integral
+# Ordinary Gaussian Integral
 
 ## One Dimensional Case
 
@@ -26,7 +26,7 @@ $$
 \int_{-\infty}^{\infty}\mathrm{d}x\, \mathrm{e}^{-x^2}=\sqrt{\pi}
 $$
 
-There are many ways to get this.
+There are many ways to get this. You can find some on Wiki.
 
 By the Integration by substitution, we can get
 
@@ -112,7 +112,7 @@ $$
 > $$
 > \int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{\mathrm{i}x^2}=\int_{-\infty}^{\infty}\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=\lim_{R\to\infty}\int_{D}^{A}\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}\\
 > \oint_{ABCDA}\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=0\\
-> \Rightarrow\int_A^B\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=\int_C^B\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}-\left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}
+> \Rightarrow\int_D^A\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=\int_C^B\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}-\left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}
 > $$
 >
 > The first term on the right side is just Gaussian Integral
@@ -133,7 +133,7 @@ $$
 > \left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}&\to 2\lim_{R\to\infty}\int_A^B\,\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}
 > \\&=2\lim_{R\to\infty}\int_0^{\pi/4}\mathrm{d}(R\mathrm{e}^{\mathrm{i}\theta}) \mathrm{e}^{\mathrm{i}R^2\mathrm{e}^{2\mathrm{i}\theta}}
 > \\&=2\lim_{R\to\infty}\int_0^{\pi/4}\mathrm{i}\mathrm{e}^{\mathrm{i}\theta}R\mathrm{d}\theta\, \mathrm{e}^{\mathrm{i}R^2(\cos{2\theta}+\mathrm{i}\sin{2\theta})}
-> \\&=2\lim_{R\to\infty}\int_0^{\pi/4}\mathrm{d}\theta\, R\mathrm{e}^{-R^2\sin{2\theta}}\,\mathrm{i}\mathrm{e}^{\mathrm{i\left(\theta+R^2\cos{2\theta}\right)}}
+> \\&=2\lim_{R\to\infty}\int_0^{\pi/4}\mathrm{d}\theta\, R\mathrm{e}^{-R^2\sin{2\theta}}\,\mathrm{i}\mathrm{e}^{\mathrm{i}\left(\theta+R^2\cos{2\theta}\right)}
 > \end{align}
 > $$
 >
@@ -181,5 +181,113 @@ $$
 \int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{\mathrm{i}\left(\frac 12 x^{\text T}Ax+b^{\text T}x\right)}=\sqrt{\frac{(2\pi\mathrm{i})^n}{\det A}}\exp\left(\frac{\mathrm{i}}{2} b^{\text T}A^{-1}b\right)
 $$
 
+# Can we combine them together?
 
-#### Can we combine them together?
+Can we just bring the complex $A$ in the ordinary formula?
+
+$$
+\int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{-{\frac12}x^{\text T}Ax}=\sqrt{\frac{(2\pi)^n}{\det A}}\\
+
+\int_{\mathbb{R}^n}\mathrm{d}x\,\mathrm{e}^{-\frac 12 x^{\text{T}}A x+b^{\mathrm{T}}x}
+=\sqrt{\frac {(2\pi)^n}{\det A}}\exp\left(\frac12 b^{\text T}A^{-1}b\right)
+$$
+
+If we shift $A$ to $A/\mathrm{i}$, then we get the $N$-dimensional Fresnel Integral directly.
+
+## One-Dimensional Case
+
+We can choose a loop for $\mathrm{e}^{-z^2}$ like in the Fresnel Integral case but without an fixed angle at $45\degree$.
+
+<div align=center><img src="D:\量子力学II\note\figs\Fresnel-Integral-general.svg" width="300"></div>
+
+$$
+\int_C^B\mathrm{d}z\,\mathrm{e}^{-z^2}=\int_D^A\mathrm{d}z\,\mathrm{e}^{-z^2}+\left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{-z^2}
+$$
+
+On the left hand side,
+
+$$
+\text{LHS}=\int_{-\infty}^{\infty}\mathrm{d}(x\mathrm{e}^{\mathrm{i}\alpha})\,\mathrm{e}^{-\mathrm{e}^{2\mathrm{i}\alpha}x^2}=\mathrm{e}^{\mathrm{i}\alpha}\int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{-\mathrm{e}^{2\mathrm{i}\alpha}x^2}
+$$
+
+The first term on the right hand side is the Gaussian Integral, whose value is $\sqrt{\pi}$. And the second term on the right hand side is zero due to some condition.
+
+$$
+\begin{align}
+\text{RHS-2} & =2\int _{0}^{\alpha }\mathrm{d} (R\mathrm{e}^{\mathrm{i} \theta } )\ \mathrm{e}^{-R^{2}\mathrm{e}^{\mathrm{2i\theta }}}\\
+ & =2R\int _{0}^{\alpha }\mathbf{i}\mathrm{e}^{\mathbf{i} \theta }\mathrm{d} \theta \ \mathrm{e}^{-R^{2}(\cos 2\theta +\mathbf{i}\sin 2\theta )}\\
+ & =2R\int _{0}^{\alpha }\mathrm{d} \theta \ \mathrm{e}^{-R^{2}\cos 2\theta }\mathrm{ie}^{\mathbf{i}\left( \theta -R^{2}\sin 2\theta \right)}
+\end{align}
+$$
+
+If $-\frac \pi 4\leq\alpha\leq\frac \pi 4$, then this term is zero. You can use the same trick before. Only when $\lvert\alpha\rvert=\frac \pi 4$ the product function will touch 0, and that's when you need to divide the integral into two estimates. If $\lvert\alpha\rvert>\frac \pi 4$, the exponential decay term becomes an exponential explosion term and the integral does not converge.
+
+So we get our result
+
+$$
+\int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{-\mathrm{e}^{2\mathrm{i}\alpha}x^2}=\mathrm{e}^{-\mathrm{i}\alpha}\sqrt{\pi}=\sqrt{\frac{\pi}{\mathrm{e}^{2\mathrm{i}\alpha}}},\lvert\alpha \rvert\leq\frac \pi 4.
+$$
+
+The condition $\lvert\alpha \rvert\leq\frac \pi 4$ means $\mathrm{Re}\{\mathrm{e}^{2\mathrm{i}\alpha}\}\geq0$, so by the Integration by substitution, we can rewrite our result by
+
+$$
+\int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{-\zeta x^2}=\sqrt{\frac \pi\zeta},\mathrm{Re}\,\zeta\geq0.
+$$
+
+## $N$-Dimensional Case
+
+The big problem is how to treat a complex matrix with the real valuables. Decompose the matrix into real and imaginary parts and decompose the matrix into real and imaginary parts and diagonalize them simultaneously. This is the general eigenvalue problem. The general eigenvalue decomposition can not finished by an orthogonal transformation, but don't worry, we will just use the ideal behind it.
+
+Consider $A=B+\mathrm{i}C$ is a symmetric complex matrix and $B$ is a real symmetric positive definite matrix and $C$ is a symmetric invertible real matrix.
+
+So $B=R^2$ and $R$ is also real symmetric positive definite matrix(Refer to *Linear Algebra Done Right*). Thus
+
+$$
+x^{\text T}Ax\xlongequal{y=Rx}y^{\text T}R^{-1}AR^{-1}y=y^{\text T}(I+\mathrm{i}R^{-1}CR^{-1})y
+$$
+
+Then we can diagonalize $R^{-1}CR^{-1}$.
+
+$$
+x^{\text T}Ax\xlongequal[y'=Py]{y=Rx}y'^{\text T}y'+\mathrm{i}y'^{\text T}\Lambda y'
+$$
+
+So in the integral
+
+$$
+\begin{align}
+\int \mathrm{d} x\ \mathrm{e}^{-\frac{1}{2} x^{\mathrm{T}} Ax} & \xlongequal[y'=Py]{y=Rx}\int \mathrm{d} x\ \mathrm{e}^{-\frac{1}{2} x^{\mathrm{T}} Ax}\\
+ & =\int | \det R| \mathrm{d} y'\ \exp\left( -\frac{1}{2} y^{\prime \mathrm{T}} y-\frac{\mathbf{i}}{2} y^{\prime \mathrm{T}} \Lambda y'\right)\\
+ & =| \det R| \prod\limits _{k=1}^{n}\int \mathrm{d} y'_{k} \ \exp\left( -\frac{1}{2}( 1+\mathbf{i} \lambda _{k}) y^{\prime 2}_{k}\right)\\
+ & =| \det R| \prod\limits _{k=1}^{n}\sqrt{\frac{2\pi }{( 1+\mathbf{i} \lambda _{k})}}\\
+ & =\sqrt{\frac{2\pi }{\det B}\frac{1}{\prod _{k=1}^{n}( 1+\mathbf{i} \lambda _{k})}}
+\end{align}
+$$
+
+Here $\lambda_k$ is the eigenvalues of $R^{-1}CR^{-1}$. So $1+\mathrm{i}\lambda_k$ is the eigenvalues of $I+\mathrm{i}R^{-1}CR^{-1}$, therefore
+
+$$
+\prod _{k=1}^{n}( 1+\mathbf{i} \lambda _{k}) =\det\left( 1+\mathbf{i} R^{-1} CR^{-1}\right)
+$$
+
+$$
+\begin{align*}
+\det B\cdot \det\left( 1+\mathbf{i} R^{-1} CR^{-1}\right) & =\det R\cdot \det\left( 1+\mathbf{i} R^{-1} CR^{-1}\right) \cdot \det R\\
+ & =\det A
+\end{align*}
+$$
+
+Thus we get one of our ideal result:
+
+If $A$ is a symmetric invertible matrix whose real part is positive definite matrix, then
+
+$$
+\int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{-{\frac12}x^{\text T}Ax}=\sqrt{\frac{(2\pi)^n}{\det A}}
+$$
+
+By the same way we can add the linear term
+
+$$
+\int_{\mathbb{R}^n}\mathrm{d}x\,\mathrm{e}^{-\frac 12 x^{\text{T}}A x+b^{\mathrm{T}}x}
+=\sqrt{\frac {(2\pi)^n}{\det A}}\exp\left(\frac12 b^{\text T}A^{-1}b\right)
+$$
