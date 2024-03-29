@@ -17,6 +17,7 @@ categories: Mathematics and Physics
         });
     </script>
 </head>
+$\require{braket}$
 
 
 
