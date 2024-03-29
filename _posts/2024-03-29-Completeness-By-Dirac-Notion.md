@@ -25,6 +25,7 @@ In a function space $X$, the completeness of a set of functions $\{\psi_k\}$ mea
 $$
 \psi=\sum_k \langle \psi_k,\psi\rangle \psi_k
 $$
+
 For a proof you can see the 18th chapter of *Mathematical Analysis by Zorich*.
 
 However, as a student major in physics, by using Dirac's notion, the equation can be written more beautifully:
