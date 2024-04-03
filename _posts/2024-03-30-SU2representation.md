@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Irreducible representation of SU(2)$"
+title:  "Irreducible representation of SU(2)"
 date:   2024-03-30 15:42:00 +0800
 author: "Xuan Zhang"
 categories: Mathematics and Physics
