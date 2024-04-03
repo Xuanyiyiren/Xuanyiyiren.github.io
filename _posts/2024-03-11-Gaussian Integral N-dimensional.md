@@ -48,9 +48,15 @@ Here $A$ is a positive definite symmetric matrix.
 > 
 > 
 > 
+> 
+> 
+> 
 > $$
 > x^{\mathrm{T}}Ax=\sum_{k=1}^{n}\lambda _k y_k^2
 > $$
+> 
+> 
+> 
 > 
 > 
 > 
@@ -58,9 +64,15 @@ Here $A$ is a positive definite symmetric matrix.
 > 
 > 
 > 
+> 
+> 
+> 
 > $$
 > \int_{\mathbb{R}^n}\mathrm{d}x\,\mathrm{e}^{-\frac 12 x^{\text{T}}A x}=\int_{\mathbb{R}^n}\mathrm{d}y\,\prod_{k=1}^n\mathrm{e}^{-\frac 12 \lambda_ky_k^2}=\sqrt{\frac{(2\pi)^n}{\prod_{k=1}^{n}\lambda_k}}=\sqrt{\frac{(2\pi)^n}{\det A}}
 > $$
+> 
+> 
+> 
 > 
 > 
 
@@ -75,6 +87,9 @@ $$
 > 
 > 
 > 
+> 
+> 
+> 
 > $$
 > \begin{align}
 > -\frac 12 x^{\text{T}}A x+b^{\text{T}}x
@@ -85,7 +100,13 @@ $$
 > 
 > 
 > 
+> 
+> 
+> 
 > We wish the second term to vanish. Thus we can choose $c=A^{-1}b$ 
+> 
+> 
+> 
 > 
 > 
 > 
@@ -95,7 +116,13 @@ $$
 > 
 > 
 > 
+> 
+> 
+> 
 > So
+> 
+> 
+> 
 > 
 > 
 > 
@@ -106,6 +133,9 @@ $$
 > \\&=\sqrt{\frac {(2\pi)^n}{\det A}}\exp\left(\frac12 b^{\text T}A^{-1}b\right)
 > \end{align}
 > $$
+> 
+> 
+> 
 > 
 > 
 
@@ -131,6 +161,9 @@ $$
 >
 > 
 > 
+> 
+> 
+> 
 > $$
 > \int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{\mathrm{i}x^2}=\int_{-\infty}^{\infty}\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=\lim_{R\to\infty}\int_{D}^{A}\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}\\
 > \oint_{ABCDA}\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=0\\
@@ -138,9 +171,15 @@ $$
 > $$
 > 
 > 
+> 
+> 
+> 
 >
 > The first term on the right side is just Gaussian Integral
 >
+> 
+> 
+> 
 > 
 > 
 > $$
@@ -153,9 +192,15 @@ $$
 > $$
 > 
 > 
+> 
+> 
+> 
 >
 > The second term is zero
 >
+> 
+> 
+> 
 > 
 > 
 > $$
@@ -168,8 +213,14 @@ $$
 > $$
 > 
 > 
+> 
+> 
+> 
 >
 > So
+> 
+> 
+> 
 > 
 > 
 > 
@@ -183,9 +234,15 @@ $$
 > $$
 > 
 > 
+> 
+> 
+> 
 >
 > Now take $R\to\infty$ on both sides 
 >
+> 
+> 
+> 
 > 
 > 
 > $$
@@ -196,13 +253,22 @@ $$
 > 
 > 
 > 
+> 
+> 
+> 
 > Here $\delta$ can be any positive number small enough(no need to be infinitesimal), this means 
+> 
+> 
+> 
 > 
 > 
 > 
 > $$
 > \lim_{R\to \infty}\left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=0
 > $$
+> 
+> 
+> 
 > 
 > 
 > 

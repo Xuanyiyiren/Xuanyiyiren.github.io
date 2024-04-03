@@ -377,9 +377,13 @@ Then problem becomes to find the minimal distance between vectors in $U=\mathrm{
 > The linear space $V=\mathbb{R}^{\{x_1,\ldots,x_N\}}\simeq \mathbb{R}^N$ is equipped with the inner product
 > 
 > 
+> 
+> 
 > $$
 > \langle f\vert g\rangle = \sum_{i=1}^N w_if(x_i)g(x_i) = f^{\mathrm{T}}Wg
 > $$
+> 
+> 
 > 
 > 
 > $y$ is a vector in $V$ and $U=\mathrm{span}\{f_0,\ldots,f_p\}$ is a subspace of $V$. 
@@ -387,17 +391,25 @@ Then problem becomes to find the minimal distance between vectors in $U=\mathrm{
 > We need to find the vector $u$ in $U$ which reaches the minimal distance between $y$, i.e.
 > 
 > 
+> 
+> 
 > $$
 > \Vert u-y\rVert=\min_{\hat u\in U}\lVert \hat u-y\rVert.
 > $$
 > 
 > 
+> 
+> 
 > And to get the coefficients $\{\beta_i\}_{i=1}^N$ of this $u$ expanded by $\{f_0,\ldots,f_p\}$, i.e. 
+> 
+> 
 > 
 > 
 > $$
 > u=\sum_{i=0}^N \beta_if_i
 > $$
+> 
+> 
 > 
 > 
 
@@ -413,9 +425,13 @@ For example, ${V}^\perp=\{0\},\{0\}^\perp=V$.
 > 
 > 
 > 
+> 
+> 
 > $$
 > V=U\oplus U^{\perp}
 > $$
+> 
+> 
 > 
 > 
 
@@ -424,12 +440,18 @@ For example, ${V}^\perp=\{0\},\{0\}^\perp=V$.
 > Frist we can show that $V=U+U^\perp$. Let $e_1,\ldots,e_m$ be an orthonormal basis of $U$
 > 
 > 
+> 
+> 
 > $$
 > v=\sum_{i=1}^m \vert e_i\rangle\langle e_i\vert v\rangle+\left(v-\sum_{i=1}^m \vert e_i\rangle\langle e_i\vert v\rangle\right).
 > $$
 > 
 > 
+> 
+> 
 > One can easily check that 
+> 
+> 
 > 
 > 
 > $$
@@ -437,12 +459,18 @@ For example, ${V}^\perp=\{0\},\{0\}^\perp=V$.
 > $$
 > 
 > 
+> 
+> 
 > And one can easily find that
+> 
+> 
 > 
 > 
 > $$
 > U\cap U^\perp=\{0\}
 > $$
+> 
+> 
 > 
 > 
 > QED.
@@ -481,6 +509,8 @@ Finally we can state the **minimization theorem** in linear algebra:
 > Proof:
 > 
 > 
+> 
+> 
 > $$
 > \begin{aligned}
 > \left\|v-P_U v\right\|^2 & \leq\left\|v-P_U v\right\|^2+\left\|P_U v-u\right\|^2 \\
@@ -490,13 +520,19 @@ Finally we can state the **minimization theorem** in linear algebra:
 > $$
 > 
 > 
+> 
+> 
 >
 > The first line hold because $0\leq\lVert P_Uv-u\rVert$. The second line hold because the Pythagorean theorem, which state that if $\langle u\vert v\rangle=0$, 
+> 
+> 
 > 
 > 
 > $$
 > \lVert u+v\rVert^2 = \lVert u\rVert^2+\lVert v\rVert^2
 > $$
+> 
+> 
 > 
 > 
 
@@ -507,17 +543,25 @@ Now return to our original problem. Let's state our problem again:
 > The linear space $V=\mathbb{R}^{\{x_1,\ldots,x_N\}}\simeq \mathbb{R}^N$ is equipped with the inner product
 > 
 > 
+> 
+> 
 > $$
 > \langle f\vert g\rangle = \sum_{i=1}^N w_if(x_i)g(x_i) = f^{\mathrm{T}}Wg
 > $$
 > 
 > 
+> 
+> 
 > $y$ is a vector in $V$ and $U=\mathrm{span}\{f_0,\ldots,f_p\}$ is a subspace of $V$, we need to find the coefficients $\beta_i$ of $u=\sum_{i=0}^N\beta_i f_i$ which reaches the minimal distance  
+> 
+> 
 > 
 > 
 > $$
 > \Vert u-y\rVert=\min_{\hat u\in U}\lVert \hat u-y\rVert
 > $$
+> 
+> 
 > 
 > 
 
