@@ -46,15 +46,23 @@ Here $A$ is a positive definite symmetric matrix.
 
 > The proof is very simple. Just because $A$ is symmetric, according to the real spectrum theorem, the exist a orthogonal transformation $x\to y$ such that
 > 
+> 
+> 
 > $$
 > x^{\mathrm{T}}Ax=\sum_{k=1}^{n}\lambda _k y_k^2
 > $$
 > 
+> 
+> 
 > The orthogonal transformation in integral is simply change the valuable.
+> 
+> 
 > 
 > $$
 > \int_{\mathbb{R}^n}\mathrm{d}x\,\mathrm{e}^{-\frac 12 x^{\text{T}}A x}=\int_{\mathbb{R}^n}\mathrm{d}y\,\prod_{k=1}^n\mathrm{e}^{-\frac 12 \lambda_ky_k^2}=\sqrt{\frac{(2\pi)^n}{\prod_{k=1}^{n}\lambda_k}}=\sqrt{\frac{(2\pi)^n}{\det A}}
 > $$
+> 
+> 
 
 ### With Linear Term
 
@@ -65,6 +73,8 @@ $$
 
 > To proof this, we also use the integration by substitution. By $y=x-c$ 
 > 
+> 
+> 
 > $$
 > \begin{align}
 > -\frac 12 x^{\text{T}}A x+b^{\text{T}}x
@@ -73,13 +83,21 @@ $$
 > \end{align}
 > $$
 > 
+> 
+> 
 > We wish the second term to vanish. Thus we can choose $c=A^{-1}b$ 
+> 
+> 
 > 
 > $$
 > -\frac12 x^{\text{T}}A x+b^{\text{T}}x=-\frac 12 y^{\text{T}}A y+\frac12 b^{\text T}A^{-1}b
 > $$
 > 
+> 
+> 
 > So
+> 
+> 
 > 
 > $$
 > \begin{align}
@@ -88,6 +106,8 @@ $$
 > \\&=\sqrt{\frac {(2\pi)^n}{\det A}}\exp\left(\frac12 b^{\text T}A^{-1}b\right)
 > \end{align}
 > $$
+> 
+> 
 
 # Fresnel Integral
 
@@ -109,14 +129,20 @@ $$
 >
 > <div align=center><img src="https://github.com/Xuanyiyiren/picx-images-hosting/raw/master/Fresnel-Integral.7awwxewzna.svg" width="300"></div>
 >
+> 
+> 
 > $$
 > \int_{-\infty}^{\infty}\mathrm{d}x\,\mathrm{e}^{\mathrm{i}x^2}=\int_{-\infty}^{\infty}\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=\lim_{R\to\infty}\int_{D}^{A}\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}\\
 > \oint_{ABCDA}\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=0\\
 > \Rightarrow\int_D^A\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=\int_C^B\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}-\left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}
 > $$
+> 
+> 
 >
 > The first term on the right side is just Gaussian Integral
 >
+> 
+> 
 > $$
 > \begin{align}
 > \int_C^B\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}&\xrightarrow{z=x\mathrm{e}^{\mathrm{i}\pi/4}}\int_{-\infty}^{\infty}\mathrm{d}(x\mathrm{e^{\mathrm{i}\pi/4}})\,\mathrm{e}^{\mathrm{i}x^2\mathrm{e}^{\mathrm{i}\pi/2}}
@@ -125,9 +151,13 @@ $$
 > \\&=\sqrt{\frac \pi2}(1+\mathrm{i})=\sqrt{\mathrm{i}\pi}
 > \end{align}
 > $$
+> 
+> 
 >
 > The second term is zero
 >
+> 
+> 
 > $$
 > \begin{align}
 > \left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}&\to 2\lim_{R\to\infty}\int_A^B\,\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}
@@ -136,8 +166,12 @@ $$
 > \\&=2\lim_{R\to\infty}\int_0^{\pi/4}\mathrm{d}\theta\, R\mathrm{e}^{-R^2\sin{2\theta}}\,\mathrm{i}\mathrm{e}^{\mathrm{i}\left(\theta+R^2\cos{2\theta}\right)}
 > \end{align}
 > $$
+> 
+> 
 >
 > So
+> 
+> 
 > 
 > $$
 > \begin{align}
@@ -147,20 +181,30 @@ $$
 > \\&= \delta+\frac{\pi}{4} \exp(-R^2\sin(\delta/R))
 > \end{align}
 > $$
+> 
+> 
 >
 > Now take $R\to\infty$ on both sides 
 >
+> 
+> 
 > $$
 > \lim_{R\to \infty}\left|\int_0^{\pi/4}\mathrm{d}\theta\, R\mathrm{e}^{-R^2\sin{2\theta}}\,\mathrm{i}\mathrm{e}^{\mathrm{i\left(\theta+R^2\cos{2\theta}\right)}}\right|\leq \delta
 > \\
 > \lim_{R\to \infty}\left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}\leq 2\delta
 > $$
 > 
+> 
+> 
 > Here $\delta$ can be any positive number small enough(no need to be infinitesimal), this means 
+> 
+> 
 > 
 > $$
 > \lim_{R\to \infty}\left(\int_A^B+\int_C^D\right)\mathrm{d}z\,\mathrm{e}^{\mathrm{i}z^2}=0
 > $$
+> 
+> 
 > 
 > So the second term is zero. The conclusion has been proved.
 
