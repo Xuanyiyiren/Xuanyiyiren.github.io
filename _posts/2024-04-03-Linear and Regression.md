@@ -27,23 +27,30 @@ categories: Mathematics
 ### Motivation
 
 There is a linear model between $y$ and $x$ with unknown parameter:
+
 $$
 y=\beta_0+\beta_1x.
 $$
+
 You did same experiment and got some data
+
 $$
 (x_1,y_1),(x_2,y_2),\ldots,(x_N,y_N).
 $$
+
 How to use these data to estimate the parameter $\beta_0,\beta_1$?
 
 ### By Least Square
 
 The least squares method is to minimize the following function
+
 $$
 L(\beta_0,\beta_1)=\sum_{i=1}^N (y_i-\hat y_i)^2\\
 \hat y_i = \beta_0+\beta_1x_i
 $$
+
 We get the result by
+
 $$
 \frac{\partial L}{\partial \beta_i}=0~,~i=0,1
 $$
@@ -54,6 +61,7 @@ $$
 $$
 
 By simplifying the equation, one can derive
+
 $$
 \begin{gather*}
 \begin{cases}
@@ -63,7 +71,9 @@ $$
 \overline{x} =\frac{1}{N}\sum _{i=1}^{N} x_{i} ,\overline{y} =\frac{1}{N}\sum _{i=1}^{N} y_{i} ,\overline{x^{2}} =\frac{1}{N}\sum _{i=1}^{N} x_{i}^{2} ,\overline{xy} =\frac{1}{N}\sum _{i=1}^{N} x_{i} y_{i}
 \end{gather*}
 $$
+
 Thus the result is
+
 $$
 \begin{cases}
 \beta _{0} =\frac{\begin{vmatrix}
@@ -87,22 +97,29 @@ $$
 ### By Maximum Likelihood.
 
 Consider $y_i$ to have a Gaussian noise around the truth value
+
 $$
 y=\beta_0+\beta_1x+\eta
 $$
+
 All the $\eta$ is independent and obey the gaussian distribution $\mathcal{N}(0,\sigma^2)$, thus $y$ obey the distribution $\mathcal{N}(\beta_0+\beta_1x,\sigma^2)$.
 
 The data is just a sample of $\eta$,
+
 $$
 \eta_i=y_i-\beta_0-\beta_1x_i,i=1,\ldots,N
 $$
+
 The Likelihood function of $\{\eta_i\}_{i=1}^N$ is
+
 $$
 \mathcal{L}(\beta_0,\beta_1;x_1,\ldots,x_N,y_1,\ldots,y_N)=\prod_{i=1}^N \frac{1}{\sigma \sqrt{2\pi}}\exp\left(-\frac{(y_i-\hat y_i)^2}{2\sigma^2}\right)
 \\
 \hat y_i = \beta_0-\beta_1x_i
 $$
+
 Thus the log-likelihood function is
+
 $$
 \begin{align*}
 \mathscr{l} (\beta _{0} ,\beta _{1} ;x_{1} ,\dotsc ,y_{N} ) & =\ln\mathcal{L}\\
@@ -110,7 +127,9 @@ $$
  & =-\frac{1}{2\sigma ^{2}}\sum _{i}^{N}( y_{i} -\hat{y}_{i})^{2} -N\ln \sigma -\frac{N}{2}\ln( 2\pi )
 \end{align*}
 $$
+
 So to maximize the log-likelihood function $\mathscr{l}$, it is equivalent to minimize the least squares function $L$ for
+
 $$
 \mathscr{l} =-\frac{1}{2\sigma ^{2}} L-N\ln \sigma -\frac{N}{2}\ln( 2\pi )
 $$
@@ -130,12 +149,15 @@ Some times the observed value $y_i$ is not exact, and you can get a estimate it'
 This time we begin with maximum likelihood method.
 
 This means the variance of $\eta_i$ has a estimated value $\sigma_i^2$, the likelihood function is
+
 $$
 \mathcal{L}(\beta_0,\beta_1;x_1,\ldots,x_N,y_1,\ldots,y_N)=\prod_{i=1}^N \frac{1}{\sigma_i \sqrt{2\pi}}\exp\left(-\frac{(y_i-\hat y_i)^2}{2\sigma_i^2}\right)
 \\
 \hat y_i = \beta_0-\beta_1x_i.
 $$
+
 So the log-likelihood function is
+
 $$
 \begin{align*}
 \mathscr{l} (\beta _{0} ,\beta _{1} ;x_{1} ,\dotsc ,y_{N} ) & =\ln\mathcal{L}\\
@@ -158,6 +180,7 @@ This weight means we should pay more attention on those observed values with hig
 In fact, we do not have to know the $\sigma_i^2$'s values totally, just the ratio is enough. That is $1/\sigma_i^2=w_i/\sigma^2$, which is $w_i=\frac{\sigma^2}{\sigma_i^2}$. The parameter $\sigma^2$ is called **variance of unit weight**, meaning the variance with weight $1$.
 
 Now the maximum likelihood function and the least squares function is
+
 $$
 \begin{gather*}
 \sigma _{i} =\frac{\sigma }{\sqrt{w_{i}}}\\
@@ -170,17 +193,21 @@ $$
 L=\sum _{i=1}^{N} w_{i}( y_{i} -\hat{y}_{i})^{2}
 \end{gather*}
 $$
+
 If we choose $w_i\equiv 1$, it degrade to the simple linear regression.
 
 ### Formula
 
 We can get the result by minimize the least squares function
+
 $$
 L=\sum _{i=1}^{N} w_{i}( y_{i} -\hat{y}_{i})^{2}\\
 \frac{\partial L}{\partial \beta _{0}} =\sum _{i=1}^{N} 2w_{i}(\hat{y}_{i} -y_{i}) =0\\
 \frac{\partial L}{\partial \beta _{1}} =\sum _{i=1}^{N} 2w_{i}(\hat{y}_{i} -y_{i}) x_{i} =0
 $$
+
 One can easily derive that the formula is very similar to the previous one.
+
 $$
 \begin{gather*}
 \begin{cases}
@@ -194,30 +221,38 @@ $$
 \end{cases}
 \end{gather*}
 $$
+
 The formula is exactly the same as before, only the summation is replaced by the weighted summation.
 
 ## Non Linear Regression
 
 There is a non-linear model $y=f(x;\beta),x\in\mathbb{R}^n,\beta\in \mathbb{R}^p$, you did same experiment and got some data
+
 $$
 (x_1,y_1),(x_2,y_2),\ldots,(x_N,y_N).
 $$
+
 How to use these data to estimate the parameters ?
 
 Both least squares method and the maximum likelihood method are to minimize the following function
+
 $$
 L(\beta)=\sum_{i=1}^N w_i(y_i-\hat y_i)^2\\
 \hat y_i = f(x_i;\beta)
 $$
+
 By $\frac{\partial L}{\partial \beta}=0$, we get
+
 $$
 \sum _{i=1}^{N} 2w_i( f( x_{i} ;\beta ) -y_{i})\frac{\partial f}{\partial \beta }( x_{i} ;\beta ) =0
 $$
+
 Now we cannot do more calculation. In fact, for a non-linear model, we often use the numeral optimizer to do least squares.
 
 ## General Linear Regression and General Least Squares Question
 
 We specialize our model to **general linear model**
+
 $$
 f=\beta_0 + \beta_1f_1(x)+\beta_2f_2(x)+\cdots+\beta_pf_p(x)\\
 L=\sum _{i=1}^{N} w_{i}( y_{i} -\hat{y}_{i})^{2} =\sum _{i=1}^{N} w_{i}\left(\sum _{j=0}^{p} \beta _{p} f_{p}( x_{i}) -y_{i}\right)^{2}
@@ -226,6 +261,7 @@ $$
 ### An analytical way to least squares
 
 Of cause, you can directly get the result by $\frac{\partial L}{\partial \beta}=0$,
+
 $$
 \sum _{i=1}^{N}w_i\left(\sum _{j=0}^{p} \beta _{j} f_{j}( x_{i}) -y_{i}\right) f_{j}( x) =0,j=0,\dotsc ,p
 \\
@@ -246,11 +282,13 @@ $$
 \overline{f_{p}( x) y}
 \end{pmatrix}
 $$
+
 Note that the $\bar{z}$ is weighted sum $\bar{z}=\frac{\sum_{i=1}^N w_iz_i}{\sum_{i=1}^N w_i}$.
 
 Now, how do you ensure that this equation exists a solution?
 
 A better way is to modify the form of the original function.
+
 $$
 W=\begin{pmatrix}
 w_{1} &  &  & \\
@@ -275,14 +313,18 @@ y_{2}\\
 y_{N}
 \end{pmatrix}
 $$
+
 Therefore
+
 $$
 \hat{y} =A\beta\\
 L=( A\beta -y)^{\mathrm{T}} W( A\beta -y)
 $$
+
 (If you feel the elegant algebraic perspective behind the equation, you can skip this little part to the next one.)
 
 Now we can use the calculus,
+
 $$
 \begin{gather*}
 L=( A\beta -y)^{\mathrm{T}} W( A\beta -y)\\
@@ -292,10 +334,13 @@ L=\beta ^{\mathrm{T}}\left( A^{\mathrm{T}} WA\right) \beta -2y^{\mathrm{T}} WA\b
 \beta =\left( A^{\mathrm{T}} WA\right)^{-1} A^{\mathrm{T}} Wy
 \end{gather*}
 $$
+
 Now, we get the general linear regression formula
+
 $$
 \beta =\left( A^{\mathrm{T}} WA\right)^{-1} A^{\mathrm{T}} Wy \tag{GLRE}
 $$
+
 However, we still do not prove why $A^{\mathrm{T}} WA$ is invertible here. Because it is an algebraic problem.
 
 ### An algebraic perspective of Least Squares
@@ -314,6 +359,7 @@ We have two ways to denote the vectors in the linear space:
 Both notion will be used in the lecture note. In fact the second notion is the representation of a vector in $V$ by discrete delta function $\delta_i(x_j)=\delta_{ij}$.
 
 If we equip this linear space with a inner product by
+
 $$
 \langle f\vert g\rangle = \sum_{i=1}^N w_if(x_i)g(x_i) = f^{\mathrm{T}}Wg\\
 W=\begin{pmatrix}
@@ -323,6 +369,7 @@ w_{1} &  &  & \\
  &  &  & w_{n}
 \end{pmatrix}
 $$
+
 Then problem becomes to find the minimal distance between vectors in $U=\mathrm{span}\{f_0,\ldots,f_p\}$ and $y$ and which vector in $U$ reach it. 
 
 > **The statement of Our Problem in Linear Algebra**
@@ -373,10 +420,12 @@ For example, ${V}^\perp=\{0\},\{0\}^\perp=V$.
 > QED.
 
 So we can define the **orthogonal projection** $P_U:V\to U$ by the decomposition $V=U\oplus U^\perp$,
+
 $$
 \forall v\in V,\exists !u\in U,\exists !w\in U^{\perp } ,v=u+w,u\in U,w\in U^{\perp }\\
 P_{U} :v\mapsto u
 $$
+
 One can easily find these properties of orthogonal projection
 
 - $P_U u=u$ for every $u\in U$
@@ -387,6 +436,7 @@ One can easily find these properties of orthogonal projection
 - $\lVert P_Uv\rVert\leq\lVert v\rVert$ for every $v\in V$
 
 By the proof before we can find that a way to construct $P_U$ by $U$'s orthogonal basis $\{e_i\}_{i=1}^m$.
+
 $$
 U=\sum_{i=1}^m \vert e_i\rangle\langle e_i\vert
 $$
@@ -430,13 +480,17 @@ Now return to our original problem. Let's state our problem again:
 The minimization theorem tells us that the vector reaches the minimal distance is $u=P_Uv$. However, to really solve the least squares problem, we have to expand $P_Uv$ in to $f_0,\cdots,f_p$. This seems to be trivial, but it is hard to get the result.
 
 So we construct the linear space $\mathbb{R}^p$ equipped with the standard inner product to represent the coefficients $\beta =( \beta _{0} ,\dotsc ,\beta _{p})^{\mathrm{T}}$. And construct a map $A:\mathbb{R}^p\to V$ by
+
 $$
 A\beta = \sum_{j=0}^p \beta_jf_j.
 $$
+
 So $\mathrm{range}\,A=U$, we need to solve the equation
+
 $$
 A\beta=P_Uy
 $$
+
 We can apply $A^\dagger$ on both side and using the property of adjoint[^1]
 
 [^1]: $T^{\dagger } v=0\Leftrightarrow \langle w,T^{\dagger } v\rangle =0,\forall w\Leftrightarrow \langle v,Tw\rangle =0,\forall w\Leftrightarrow v\in (\mathrm{range} \ T)^{\perp }$
@@ -446,11 +500,14 @@ $$
 $$
 
 We get
+
 $$
 \ker A^\dagger=U^\perp, y-P_Uy\in U^\perp \\
 \Rightarrow A^{\dagger } A\beta =A^{\dagger } P_{U} y=A^{\dagger }[ P_{U} y+( y-P_{U} y)] =A^{\dagger } y
 $$
+
 Here $A^\dagger A$ is invertible if $f_0,\ldots,f_p$ is linearly independent. Because
+
 $$
 A^{\dagger } A\gamma =0\\
 \Rightarrow A\gamma \in \ker A^{\dagger } =\left(\operatorname{range} A\right)^{\perp }\\
@@ -460,13 +517,17 @@ A^{\dagger } A\gamma =0\\
 \Rightarrow \gamma _{i} \equiv 0\\
 \Rightarrow \gamma = 0
 $$
+
 So the result is
+
 $$
 \beta = (A^\dagger A)^{-1}A^\dagger y.
 $$
+
 Now, does it end? Remember that we are solving a practical problem. We need to offer the result by matrices rather than abstract operators.
 
 Consider to use the standard basis of $\mathbb{R}^p$ and the discrete delta functions $\{\delta_i:\delta_i(x_k)=\delta_{ik}\}$ as the basis of $V=\mathbb{R}^{\{x_1,\ldots,x_N\}}$. The matrices form is
+
 $$
 \begin{gather*}
 A=\begin{pmatrix}
@@ -492,14 +553,19 @@ w_{1} &  & \\
 \end{pmatrix} ,\langle u,v\rangle _{V} =u^{\mathrm{T}} Wv,A^{\dagger } =A^{\mathrm{T}} W
 \end{gather*}
 $$
+
 One can easily check those matrices representations. For the last one
+
 $$
 \langle v,Aw\rangle _{V} =u^{\mathrm{T}} WAw=\left( A^{\mathrm{T}} Wu\right)^{\mathrm{T}} w=\langle A^{\dagger } u,w\rangle _{\mathbb{R}^{p}}
 $$
+
 So the result is
+
 $$
 ( \beta _{0} ,\dotsc ,\beta _{N})^{\mathrm{T}} =\beta =\left( A^{\mathrm{T}} WA\right)^{-1} AWy,
 $$
+
 which is the same with the analytical one.
 
 
@@ -515,9 +581,11 @@ which is the same with the analytical one.
 ## The Confidence Interval of Parameters
 
 To get the confidence interval of parameters, we should treat the relationship between data $\{x_i,y_i,w_i\}_{i=1}^N$ and regression result $\beta$ as a estimator.
+
 $$
 \hat \beta = \hat \beta\left(\{x_i,y_i,w_i\}_{i=1}^N\right)
 $$
+
 Now the $\hat \beta$ is a statistic of sample data. The interval is just the standard error of $\hat \beta$
 
 ## Reference
