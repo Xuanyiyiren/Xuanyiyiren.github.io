@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "岩浆怪shi莱姆农场"
+title:  "岩浆史莱姆农场"
 date:   2024-01-28 01:17:00 +0800
 author: "Xuan Zhang"
 categories: Minecraft
